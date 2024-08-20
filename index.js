@@ -1,6 +1,7 @@
 import {userRouter,express} from './controller/userController.js';
 import {productRouter} from './Controller/productController.js';
-import {errorHandling} from './Middleware/errorHandling.js';
+import cookieParser from 'cookie-parser';
+import  {errorHandling} from './middleware/errorHandling.js';
 import path from 'path';
 import { config } from 'dotenv';
 import cors from 'cors'

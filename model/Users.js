@@ -1,4 +1,4 @@
-import {connection } from "../Config/index"
+import {connection } from "../Config/index.js"
 // import { createConnection } from "../middleware/authenticateuser"
 import {compare, hash} from "bcrypt" 
 class Users {

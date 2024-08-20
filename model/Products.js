@@ -1,4 +1,4 @@
-import { connection  } from '../Config/index';
+import { connection  } from '../Config/index.js';
 
 class Products {
     fetchProducts(req,res) {

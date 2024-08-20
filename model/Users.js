@@ -34,7 +34,7 @@ class Users {
             FROM Users
          WHERE userID = ${req.params.id};
         `;
-      db.query(strQry, (err, result) => {
+      connection.query(strQry, (err, result) => {
         if (err) throw new Error("Issue when retrieving a user.");
         res.json({
           status: res.statusCode,
@@ -61,7 +61,7 @@ class Users {
         INSERT INTO Users
         SET ?;
         `;
-      db.query(strQry, [data], (err) => {
+      connection.query(strQry, [data], (err) => {
         if (err) {
           res.json({
             status: res.statusCode,
@@ -95,7 +95,7 @@ class Users {
         SET ?
         where userID = ${req.params.id};
         `;
-      db.query(strQry, [data], (err) => {
+      connection.query(strQry, [data], (err) => {
         if (err) throw new Error("Unable to update user");
         res.json({
           status: res.statusCode,
@@ -115,7 +115,7 @@ class Users {
         DELETE FROM Users
         WHERE userID = ${req.params.id};
         `;
-      db.query(strQry, (err) => {
+      connection.query(strQry, (err) => {
         if (err)
           throw new Error("To delete a user, please review your delete query.");
         res.json({

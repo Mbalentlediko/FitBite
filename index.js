@@ -1,5 +1,5 @@
 import {userRouter,express} from './controller/userController.js';
-import {productRouter} from './Controller/productController.js';
+import { productRouter } from './controller/productController.js'
 import cookieParser from 'cookie-parser';
 import { errorHandling } from './middleware/ErrorHandling.js';
 import path from 'path';

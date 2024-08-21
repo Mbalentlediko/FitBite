@@ -5,7 +5,7 @@ class Products {
        
             try {
                 const strQry = `
-                SELECT productID,prodName,quantity,amount, category, prodUrl
+                SELECT *
                 FROM Products;
                 `
             connection.query(strQry, (err, results) => {
@@ -49,9 +49,9 @@ class Products {
     fetchProduct(req,res) {
         try {
             const strQry = `
-           SELECT productID,prodName,quantity,amount, category, prodUrl
-                FROM Products
-            WHERE productID = ${req.params.id};
+            SELECT *
+            FROM Products
+            WHERE prodID = ${req.params.id};
             `
             connection.query(strQry, (err, result) => { 
                 if (err) throw new Error('There was a problem fetching your product.')
@@ -94,7 +94,7 @@ class Products {
             const strQry = `
             UPDATE Products
             SET ?
-            WHERE productID = ${req.params.id};
+            WHERE prodID = ${req.params.id};
     
             `;
             connection.query(strQry, [req.body], (err) => {
@@ -116,7 +116,7 @@ class Products {
         try {
             const strQry = `
             DELETE FROM Products
-            WHERE productID = ${req.params.id};
+            WHERE prodID = ${req.params.id};
             `
             connection.query(strQry, (err) => {
               if (err) throw new Error('To delete a product, please review your delete query.')

@@ -1,41 +1,36 @@
 import {connection } from "../Config/index.js"
 // import { createConnection } from "../middleware/authenticateuser"
 import {compare, hash} from "bcrypt" 
+
+import { createToken } from "../middleware/authenticateuser.js";
 class Users {
     fetchUsers(req,res) {
         try {
-            const strQry= `SELECT firstName, 
-            lastName, 
-            Gender, userAge, 
-            userRole, userEmail, 
-            userPass, userProfile
+            const strQry= `SELECT *
             FROM Users`;
         connection.query(strQry, (err, results) => {
         if (err) throw new Error("Issue when retrieving all users.");
         res.json({
-          status: res.statusCode,
-          results,
+            status: res.statusCode,
+            results,
         });
-      });
+        });
     } catch (e) {
-      res.json({
+        res.json({
         status: 404,
         msg: e.message,
-      });
+        });
     }
-  }
+    }
+
   fetchUser(req, res) {
     try {
       const strQry = `
-         SELECT userID,lastName, 
-            Gender, userAge, 
-            userRole, userEmail, 
-            userPass, userProfile
-            FROM Users
+         SELECT * FROM Users
          WHERE userID = ${req.params.id};
         `;
       connection.query(strQry, (err, result) => {
-        if (err) throw new Error("Issue when retrieving a user.");
+        if (err) throw new Error(err);
         res.json({
           status: res.statusCode,
           result: result[0],
@@ -48,14 +43,15 @@ class Users {
       });
     }
   }
+
   async registerUser(req, res) {
     try {
       let data = req.body;
-      data.pwd = await hash(data.pwd, 12);
+      data.userPass = await hash(data.userPass, 12);
       // Payload
       let user = {
         emailAdd: data.emailAdd,
-        pwd: data.pwd,
+        pwd: data.userPass,
       };
       let strQry = `
         INSERT INTO Users
@@ -109,6 +105,7 @@ class Users {
       });
     }
   }
+
   deleteUser(req, res) {
     try {
       const strQry = `

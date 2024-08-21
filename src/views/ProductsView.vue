@@ -1,16 +1,16 @@
 <template>
     <div class="product">
-      <h1>This is an products page</h1>
+      <h1>This is a products page</h1>
       <div>
             <hr>
-            <section v-for="product in $store.state.products" :key="product.prodID">
+            <section v-for="product in products() " :key="product.prodID">
                 <br>
                 {{ product.prodID }}
                 {{ product.prodName }}
                 {{ product.quantity }}
                 R{{ product.amount }}
                 {{ product.category }}
-                <!-- <img v-bind="" src="{{ products.prodUrl }}" alt=""> -->
+                <!-- <img :src= "product.prodUrl" alt=""> -->
                 
                 
                 <br><br>
@@ -25,6 +25,9 @@
       methods:{
         getProducts(){
             this.$store.dispatch('getProducts')
+        },
+        products(){
+            return this.$store.state.products
         }
         // ,
         // addToCart(id_fruit){

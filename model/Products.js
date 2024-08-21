@@ -12,7 +12,7 @@ class Products {
                     if (err) throw new Error('There was a problem fetching all products.') 
                     res.json({
                         status: res.statusCode,
-                        results
+                        results : results
                     })
                 })
             } catch (e) {
@@ -26,16 +26,16 @@ class Products {
     recentProducts(req,res){
         try {
             const strQry = `
-            SELECT productID,prodName,quantity,amount, category, prodUrl
-                FROM Products
-            ORDER BY productID DESC
+            SELECT *
+            FROM Products
+            ORDER BY prodID DESC
             LIMIT 5;
             ` 
             connection.query(strQry,(err,results)=>{
                 if (err) throw new Error('Unable to retrieve recent products') 
                 res.json({
                     status: res.statusCode,
-                    results
+                    results : results
                 })
             })
         } catch (e) {

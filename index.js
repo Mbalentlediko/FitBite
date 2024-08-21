@@ -1,16 +1,14 @@
 import {userRouter,express} from './controller/userController.js';
 import {productRouter} from './Controller/productController.js';
 import cookieParser from 'cookie-parser';
-import  {errorHandling} from './middleware/errorHandling.js';
+import { errorHandling } from './middleware/ErrorHandling.js';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { config } from 'dotenv';
 import cors from 'cors'
 config()
 
-const app = express()
-const port = +process.env.PORT || 3300
-
-app.use((req, res, next)=>{
+const app = express((req, res, next)=>{
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control-Allow-Credentials","true");
     res.header("Access-Control-Allow-Methods","*");
@@ -19,6 +17,11 @@ app.use((req, res, next)=>{
     res.header("Access-Control-Expose-Headers","Authorization");
 next()
 })
+const port = +process.env.PORT || 3300
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 // Middleware
 app.use(
     express.static('./static'),
@@ -26,12 +29,13 @@ app.use(
     express.urlencoded({
         extended: true,
   }),
-  cookies(),
+  cookieParser(),
   cors()
 )
+
 // Update
 app.get('^/$|/backend_node.js', (req,res)=>{
-    res.status(200).sendFile(path.join(__dirname, './static/index.html'))
+    res.status(200).sendFile(path.join(__dirname, './static/html/index.html'))
 })
 app.use('/users', userRouter)
 app.use('/products', productRouter)

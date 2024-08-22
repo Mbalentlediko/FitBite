@@ -27,9 +27,6 @@ userRouter.delete('/:id',(req,res)=> {
     users.deleteUser(req,res)
 })
 
-userRouter.post('/login',(req, res)=> {
-    users.login(req, res)
-})
 
 export{express,userRouter}
 

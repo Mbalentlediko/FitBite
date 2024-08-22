@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>FitBite API</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h2>Welcome to our store</h2>  
+  <h1>API Documentation</h1>
+  <h2>Users</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Route</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GET</td>
+        <td>/api/users</td>
+        <td>List all users</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/api/users</td>
+        <td>Create a new user</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/users/:id</td>
+        <td>Get user by ID</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/users/:id</td>
+        <td>Update user by ID</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/api/users/:id</td>
+        <td>Delete user by ID</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <h2>Products</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Route</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GET</td>
+        <td>/api/products</td>
+        <td>List all products</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/api/products</td>
+        <td>Create a new product</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api/products/:id</td>
+        <td>Get product by ID</td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/api/products/:id</td>
+        <td>Update product by ID</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/api/products/:id</td>
+        <td>Delete product by ID</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>

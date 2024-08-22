@@ -74,7 +74,7 @@ class Products {
             INSERT INTO Products
             SET ?;
               `;
-          connection .query(strQry, [req.body], (err) => {
+          connection.query(strQry, [req.body], (err) => {
             if (err) throw new Error("Unable to add a new Product");{
               res.json({
                 status: res.statusCode,

@@ -1,5 +1,20 @@
 <template>
     <div class="about">
-      <h1>This is an contact us page</h1>
+      <div id="background">
+
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+<h1>home</h1>
+
+</div>
     </div>
   </template>

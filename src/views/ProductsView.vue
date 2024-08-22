@@ -1,5 +1,6 @@
 <template>
     <div class="product">
+      <div id="background">
       <h1>This is a products page</h1>
       <div>
             <hr>
@@ -18,6 +19,7 @@
                 <hr>
             </section>
         </div>
+      </div>
     </div>
   </template>
     <script>

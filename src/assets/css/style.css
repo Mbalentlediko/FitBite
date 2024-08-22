@@ -1,0 +1,154 @@
+/* Universal styling */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+body{
+  background-color: white;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#app {
+  font-family: "Bungee Inline", sans-serif;
+  color: #359D58;
+}
+#background{
+    background-image: url('https://itz-marcus.github.io/ecom-img-hosting/Backdrop.png');
+    width: 100vw;
+    height:fit-content;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* nav */
+#navbar {
+    display: flex;
+    align-items: center;
+    background-image: url('https://itz-marcus.github.io/ecom-img-hosting/Banner_logo.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 10vw; 
+    width: 100vw;
+    z-index: 2;
+    justify-content:space-between;
+    
+  }
+  
+  #nav1 {
+    display: flex;
+    gap: 20px;
+    padding: 20px; 
+  }
+  #nav2 {
+    display: flex;
+    gap: 20px;
+    padding: 20px; /* Adjust padding as needed */
+  }
+  #nav1 #nav-part{
+    padding-left: 2vw;
+  }
+  #nav2 #nav-part{
+    padding-right: 2vw;
+  }
+  nav a {
+    font-weight: bold;
+    color: #2c3e50;
+    transition: 0.2s;
+    text-decoration: none;
+    font-size: 1.5vw;
+  }
+  
+  nav a.router-link-exact-active {
+    color: #FFB84E;
+  }
+/* home */
+h1{
+    width: 20px;
+}
+#controller{
+  background-color: #000000 !important;
+  border-radius: 100px;
+}
+#controller-space{
+  width: 8vw;
+}
+#c_1{
+  background-image:url('https://itz-marcus.github.io/ecom-img-hosting/ad_background.png');
+  background-size: contain;
+}
+#ad-text{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 13vw;
+  left: 1.5vw;
+  width: 40vw;
+}
+#ad-title{
+  color: rgb(255, 255, 255);
+  font-size: 1.3vw;
+  margin-left: 8.5vw;
+}
+#btn {
+    margin-left: 8.5vw;
+    padding: 0.7vw 1.56vw;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 1vw;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: transparent;
+    font-weight: bolder;
+   
+   }
+   
+   #btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+   }
+   
+   #btn:hover {
+    background-color: #359D58;
+    color: #fff;
+   }
+   
+   #btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+   }
+   
+   #btn:active {
+    transform: scale(0.9);
+   }
+   #other_prod{
+    background-color: white;
+  }
+   #other_prod h1{
+    font-size: 1vw;
+    width: fit-content;
+    text-align: center;
+  }
+  #products{
+    object-fit: contain;
+    width: 13vw;
+  }
+
+

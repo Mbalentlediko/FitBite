@@ -70,6 +70,10 @@ body::-webkit-scrollbar {
   nav a.router-link-exact-active {
     color: #FFB84E;
   }
+  i:hover{
+    font-size: 2.5vw;
+    transition: 0.3s;
+  }
 /* home */
 h1{
     width: 20px;

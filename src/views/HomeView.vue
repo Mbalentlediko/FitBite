@@ -11,6 +11,9 @@ export default {
 }
 </script>
 <style scoped>
+body{
+  background-image: url('https://itz-marcus.github.io/ecom-img-hosting/backdrop.png');
+}
 .home{
  background-color: red;
 }

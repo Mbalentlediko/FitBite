@@ -6,7 +6,7 @@
             
             <div id="foot">
                 <i class="lab la-instagram"></i><i class="lab la-youtube"></i><i class="lab la-facebook-square"></i>
-                <div class="cr">Copyright © {{ date()}} .FitBite </div> </div>
+                <div class="cr">Copyright © {{ date()}} . FitBite </div> </div>
           </footer>
         </div>
       </nav> 
@@ -38,5 +38,12 @@
     font-size: 1.7vh;
     align-content: center;
     background: #B04DFF;
+    color: white;
+}
+i{
+  font-size: 3vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 0.2vw;
 }
   </style>

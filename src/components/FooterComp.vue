@@ -1,6 +1,6 @@
 <template>
     <div>
-      <nav id="footer">
+      <nav class="sticky-bottom" id="footer">
         <div>
           <footer>
             
@@ -27,11 +27,13 @@
   <style>
   @media screen and (max-width:750px){
 .cr{
-  font-size: 14px;
+  font-size: 1vw;
 }
 }
     /* -------- footer -------- */  
 #foot{
+  position: relative;
+  bottom: 0px;
     width: auto;
     height: 8vh;
     text-align: center;
@@ -39,6 +41,7 @@
     align-content: center;
     background: #B04DFF;
     color: white;
+    
 }
 i{
   font-size: 3vh;
@@ -46,4 +49,5 @@ i{
   margin-right: 1vw;
   margin-bottom: 0.2vw;
 }
+
   </style>

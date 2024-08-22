@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /* nav */
 #navbar {
     display: flex;
@@ -53,14 +54,14 @@ body::-webkit-scrollbar {
     padding: 20px; /* Adjust padding as needed */
   }
   #nav1 #nav-part{
-    padding-left: 2vw;
+    padding-left: 1vw;
   }
   #nav2 #nav-part{
-    padding-right: 2vw;
+    padding-right: 1vw;
   }
   nav a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #359D58;
     transition: 0.2s;
     text-decoration: none;
     font-size: 1.5vw;
@@ -84,6 +85,10 @@ h1{
   background-image:url('https://itz-marcus.github.io/ecom-img-hosting/ad_background.png');
   background-size: contain;
 }
+#c_2{
+  background-image:url('https://itz-marcus.github.io/ecom-img-hosting/ad_background.png');
+  background-size: contain;
+}
 #ad-text{
   position: absolute;
   display: flex;
@@ -96,10 +101,12 @@ h1{
   color: rgb(255, 255, 255);
   font-size: 1.3vw;
   margin-left: 8.5vw;
+  margin-bottom: 0vw;
 }
 #btn {
     margin-left: 8.5vw;
-    padding: 0.7vw 1.56vw;
+    margin-top: 1.5vw;
+    padding: 0.7vw 2vw;
     background: none;
     border: 2px solid #fff;
     font-size: 1vw;
@@ -140,15 +147,76 @@ h1{
    }
    #other_prod{
     background-color: white;
+    height: 27vw;
   }
    #other_prod h1{
-    font-size: 1vw;
+    font-size: 1.7vw;
+    padding-top: 1vw;
     width: fit-content;
     text-align: center;
   }
   #products{
     object-fit: contain;
     width: 13vw;
+    margin: 2vw;
+    transition: 0.3s;
   }
+  #products:hover{
+    object-fit: contain;
+    width: 14vw;
+  }
+/* about */
+#heading1{
+  color: white;
+  width: 30vw;
+  font-size: 3.5vw;
+  padding-top: 1vw;
+}
+#heading2{
+  padding-top: 1vw;
+  color: white;
+  width: 30vw;
+  font-size: 3.5vw;
+}
+#desc1{
+  color: white;
+  font-size: 1.7vw;
+  display: flex;
+  flex-direction: column;
+  width: 53vw;
+
+}
+#desc2{
+  color: white;
+  font-size: 1.7vw;
+  width: 53vw;
+}
+#about_info{
+  display: flex;
+  flex-direction: column;
+}
+#about_img{
+  padding-top: 10vw ;
+  object-fit: contain;
+  width: 27vw;
+}
+#reviews{
+  height: 10vw;
+  background-color: white;
+}
+#reviews h1{
+  padding-top:3vw;
+  width: fit-content;
+  font-size: 3vw;
+}
+#re_image{
+  object-fit: contain;
+  width: 100vw;
+}
+/* contact */
+#body{
+  height: 78vh;
+}
+
 
 
